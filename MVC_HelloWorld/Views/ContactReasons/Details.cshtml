@@ -1,0 +1,47 @@
+﻿@model MVC_HelloWorld.Models.ContactReason
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_NavFirstContact.cshtml";
+}
+<div style="align-content: center;text-align: center;">
+    <h2>Details</h2>
+
+    <div>
+        <h4>ContactReason</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Reason)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Reason)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Message)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Message)
+            </dd>
+
+            <dt>
+                People
+            </dt>
+
+            <dd>
+                @foreach (var peop in ViewBag.People)
+                {
+                    @peop.Name
+                }
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Casey Bement Software Developer</title>
+    @Styles.Render("~/Content/Site.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="is-preload">
+    
+
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        <section id="one" class="tiles">
+            <article>
+                <span class="image">
+                    <img src="images/pic01.jpg" alt="" />
+
+                </span>
+                <header class="major">
+                    <h3>@Html.ActionLink("Home", "Index", "Home")</h3>
+                    <p>Return to the home Page</p>
+                </header>
+            </article>
+            <article>
+                <span class="image">
+                    <img src="images/pic02.jpg" alt="" />
+                </span>
+                <header class="major">
+                    <h3>@Html.ActionLink("Resume", "Resume", "Home")</h3>
+                    <p>My current Resume</p>
+                </header>
+            </article>
+            <article>
+                <span class="image">
+                    <img src="images/pic03.jpg" alt="" />
+                </span>
+                <header class="major">
+                    <h3>@Html.ActionLink("Interests", "Interests", "Home")</h3>
+                    <p>This is what I am interested in</p>
+                </header>
+            </article>
+            <article>
+                <span class="image">
+                    <img src="images/pic04.jpg" alt="" />
+                </span>
+                <header class="major">
+                    <h3>@Html.ActionLink("Contact", "Contact", "Home")</h3>
+                    <p>My contact information</p>
+                </header>
+            </article>
+
+
+        </section>
+
+        <!-- Two -->
+        
+
+    </div>
+
+    <!-- Contact -->
+    <section>
+        <div>
+            <section>
+                @RenderBody()
+                
+
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="https://twitter.com/kcbemental" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.instagram.com/kcbemental/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/Bemental77" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/bementcw/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Casey Bement</li>
+            </ul>
+        </div>
+    </footer>
+
+    </div>
+
+    <div class="container body-content">
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Casey Bement</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery.min.js" "></script>
+    <script src="~/Scripts//jquery.scrolly.min.js"></script>
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+    <script src="~/Scripts/browser.min.js"></script>
+    <script src="~/Scripts/breakpoints.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
